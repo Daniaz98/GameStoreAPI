@@ -31,3 +31,6 @@ C:\Users\danie\RiderProjects\GameStore\GameStore\obj\Debug\net8.0\refint\GameSto
 C:\Users\danie\RiderProjects\GameStore\GameStore\obj\Debug\net8.0\GameStore.pdb
 C:\Users\danie\RiderProjects\GameStore\GameStore\obj\Debug\net8.0\GameStore.genruntimeconfig.cache
 C:\Users\danie\RiderProjects\GameStore\GameStore\obj\Debug\net8.0\ref\GameStore.dll
+C:\Users\danie\RiderProjects\GameStore\GameStore\obj\Debug\net8.0\GameStore.sourcelink.json
+C:\Users\danie\RiderProjects\GameStore\GameStore\bin\Debug\net8.0\MinimalApis.Extensions.dll
+C:\Users\danie\RiderProjects\GameStore\GameStore\bin\Debug\net8.0\MiniValidation.dll
