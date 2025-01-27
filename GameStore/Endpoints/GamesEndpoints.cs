@@ -38,6 +38,7 @@ public static class GamesEndpoints
         // GET /games/id
         group.MapGet("/{id}", (int id) =>
             {
+                
                 GameDto? game = games.Find(game => game.Id == id);
         
                 return game is null ? Results.NotFound() : Results.Ok(game);
@@ -47,6 +48,8 @@ public static class GamesEndpoints
         // POST /games
         group.MapPost("/", (CreateGameDto newGame) =>
         {
+            if (string.IsNullOrEmpty(newGame.Name))
+                return Results.BadRequest("Nome é obrigatório!");
 
             GameDto game = new(
                 games.Count + 1,
@@ -67,7 +70,7 @@ public static class GamesEndpoints
 
             if (index == -1)
             {
-                return Results.NotFound( new {Message = "Game Id not found"});
+                return Results.NotFound( new {Message = "Id do Jogo não encontrado."});
             }
 
             games[index] = new GameDto(
