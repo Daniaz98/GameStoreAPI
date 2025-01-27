@@ -1,3 +1,4 @@
+using GameStore.Data;
 using GameStore.Dtos;
 using GameStore.Endpoints;
 
@@ -7,6 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+var connString = builder.Configuration.GetConnectionString("GameStore");
+builder.Services.AddSqlite<GameStoreContext>(connString);
 
 var app = builder.Build();
 
@@ -18,6 +22,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapGamesEndpoints();
+
+app.MigrateDb();
 
 app.Run();
 
