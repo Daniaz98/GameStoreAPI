@@ -32,6 +32,6 @@ A API proporcionará os seguintes recursos:
 Backend
  - .NET Minimal APIs: Para criar endpoints leves e eficientes.
  - Entity Framework Core: Para mapeamento e acesso ao banco de dados.
- - SQL Server: Para persistência de dados.
+ - SQLite: Para persistência de dados.
  - Autenticação JWT: Para controle de acesso e segurança.
 
