@@ -3,6 +3,7 @@ using System;
 using GameStore.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GameStore.Data.Migrations
 {
     [DbContext(typeof(GameStoreContext))]
-    partial class GameStoreContextModelSnapshot : ModelSnapshot
+    [Migration("20250208035819_mudanca")]
+    partial class mudanca
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.10");
@@ -41,32 +44,6 @@ namespace GameStore.Data.Migrations
                     b.HasIndex("GenreId");
 
                     b.ToTable("Games");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            GenreId = 2,
-                            Name = "Hollow Knight",
-                            Price = 39.99m,
-                            ReleaseDate = new DateOnly(2017, 2, 24)
-                        },
-                        new
-                        {
-                            Id = 2,
-                            GenreId = 1,
-                            Name = "Assassin's Creed",
-                            Price = 19.99m,
-                            ReleaseDate = new DateOnly(2007, 11, 13)
-                        },
-                        new
-                        {
-                            Id = 3,
-                            GenreId = 3,
-                            Name = "Horizon Zero Dawn",
-                            Price = 199.99m,
-                            ReleaseDate = new DateOnly(2017, 2, 28)
-                        });
                 });
 
             modelBuilder.Entity("GameStore.Entities.Genre", b =>
