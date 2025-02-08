@@ -12,6 +12,8 @@ builder.Services.AddSwaggerGen();
 var connString = builder.Configuration.GetConnectionString("GameStore");
 builder.Services.AddSqlite<GameStoreContext>(connString);
 
+builder.WebHost.UseUrls(builder.Configuration["GameStoreApiUrl"]);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -22,8 +24,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapGamesEndpoints();
+app.MapGenresEndpoints();
 
-app.MigrateDb();
+await app.MigrateDbAsync();
 
 app.Run();
 
