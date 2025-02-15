@@ -15,7 +15,6 @@ A API proporcionará os seguintes recursos:
   - Listar todos os jogos disponíveis.
   - Atualizar informações de jogos (como preço,   estoque, descrição).
   - Remover jogos do catálogo.
-  - Adicionar imagens de capas dos jogos
 
 
 ## 🛠️ Tecnologias utilizadas
