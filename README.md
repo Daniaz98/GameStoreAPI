@@ -15,11 +15,7 @@ A API proporcionará os seguintes recursos:
   - Listar todos os jogos disponíveis.
   - Atualizar informações de jogos (como preço,   estoque, descrição).
   - Remover jogos do catálogo.
-- Operações com Usuários:
-
-  - Registro de novos usuários.
-  - Login e autenticação.
-  - Gerenciamento de dados do usuário.
+  - Adicionar imagens de capas dos jogos
 
 
 ## 🛠️ Tecnologias utilizadas
@@ -28,5 +24,4 @@ Backend
  - .NET Minimal APIs: Para criar endpoints leves e eficientes.
  - Entity Framework Core: Para mapeamento e acesso ao banco de dados.
  - SQLite: Para persistência de dados.
- - Autenticação JWT: Para controle de acesso e segurança.
 
