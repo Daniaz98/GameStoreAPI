@@ -19,7 +19,6 @@ A API proporcionará os seguintes recursos:
 
 ## 🛠️ Tecnologias utilizadas
 
-Backend
  - .NET Minimal APIs: Para criar endpoints leves e eficientes.
  - Entity Framework Core: Para mapeamento e acesso ao banco de dados.
  - SQLite: Para persistência de dados.
